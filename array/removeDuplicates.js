@@ -14,7 +14,7 @@ var removeDuplicates = function (nums) {
     
     for(let key in obj1){
      duplicateLess.push(key)
-    }  // object keys are string if in real world scenario we are dealing with number then it will be buggy
+    }  
     
     const length1 = duplicateLess.length
     const length2 = nums.length
@@ -39,15 +39,13 @@ removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])
 //     const obj1 = {};
 //     const duplicateLess = [];
 
-//     // Step 1: Track the occurrence of each number in the object
 //     for (let i = 0; i < nums.length; i++) {
 //         if (!obj1[nums[i]]) {
-//           obj1[nums[i]] = true; // Use a boolean to track  unique numbers
-//             duplicateLess.push(nums[i]); // Add unique numbers to the result array
+//           obj1[nums[i]] = true; 
+//             duplicateLess.push(nums[i]);
 //         }
 //     }
 
-//     // Step 2: Fill the rest of the array with underscores (_)
 //     const length1 = duplicateLess.length;
 //     const length2 = nums.length;
 //     while (duplicateLess.length < nums.length) {
@@ -60,3 +58,25 @@ removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])
 // }
 
 // removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]);
+
+// Leetcode solution to the problems
+
+var removeDuplicates = function (nums) {
+    if (nums.length <= 1) return nums.length; 
+
+    const obj1 = {};
+    let index = 0; 
+
+    for (let i = 0; i < nums.length; i++) {
+        if (!obj1[nums[i]]) {
+            obj1[nums[i]] = true;  
+            nums[index] = nums[i]; 
+            index++; 
+        }
+    }
+    
+    console.log(nums)
+    console.log(index)
+
+    return index; 
+}

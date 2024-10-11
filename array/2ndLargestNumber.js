@@ -11,7 +11,7 @@ function findSecondLargest(arr) {
         largest = arr[i];
       } else if (arr[i] > secondLargest) {
         secondLargest = arr[i];
-      }
+      } 
     }
     return secondLargest;
   }

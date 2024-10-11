@@ -36,3 +36,20 @@ function maxSubarraySum2(arr) {
     }
     return res;
 }
+
+function maxSubarraySum3(nums){
+     if(nums.length < 2) return nums
+
+     let sum = 0
+     let maxSum = nums[0]
+
+     for(let i=1; i<nums.length-1;i++){
+     sum = sum + nums[i]
+
+     if(sum > maxSum){
+        maxSum = sum
+     } else if(sum < 0){
+        sum = 0
+     }
+     }
+}

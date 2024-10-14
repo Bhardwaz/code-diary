@@ -31,6 +31,22 @@ function longestPalindrome(s) {
     return s.substring(start, end + 1);
 }
 
-// Example usage
+// Example usage 
 const input = "babad";
-console.log(longestPalindrome(input)); // Output can be "bab" or "aba"
+//console.log(longestPalindrome(input)); // Output can be "bab" or "aba"
+
+
+
+// Given an array
+// make changes in such a way that ->
+// a0<=a1>=a2<=a3>=a4<=a5>=a6......
+
+// Time complexity should be O(n)
+// and no extra space should be used
+
+// 1,7,2,6,3,5,4
+
+
+
+
+
